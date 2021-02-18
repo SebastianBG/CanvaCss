@@ -1,0 +1,115 @@
+
+*{
+    font-family: 'Roboto', sans-serif;;
+    margin-top: 0;
+    padding: 0;
+}
+
+body{
+    background-color:#82CEF6 ;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1.4fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas:
+      "item1 item2 item3"
+      "item1 item2 item3"
+      "item4 item2 item6"
+      "item7 item5 item6"
+      "item7 item8 item9";
+    height: 95vh;
+    margin-top: 20px;
+}
+
+.card{
+    background: #FFFFFF;
+    border-radius: 6px;
+    position: relative;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 10px;
+}
+
+.card:hover{
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.6);
+    transform: translateY(-1%);
+}
+
+.card .titulo{
+    color:#284B5E;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .titulo h3{
+    display: inline;
+    font-size: 2rem;
+}
+
+.card .titulo .estandar{
+    font-size: 1.8rem;
+}
+
+.card .titulo i{
+    font-size: 2.188rem;
+}
+
+.card .contenido {
+    bottom: 0;
+    color: #444343;
+    font-size: 0.9rem;
+    position: absolute;
+}
+
+.item1 { grid-area: item1; }
+.item2 { grid-area: item2; }
+.item3 { grid-area: item3; }
+.item4 { grid-area: item4; }
+.item5 { grid-area: item5; }
+.item7 { grid-area: item7; }
+.item6 { grid-area: item6; }
+.item8 { grid-area: item8; }
+.item9 { grid-area: item9; }
+
+@media screen and (max-width: 1023px){
+    .container{
+        margin-top: 10px;
+    }
+    .card{
+        border-radius: 6px;
+    }
+    .card .titulo h3{
+        font-size:1rem;
+    }
+    .card .titulo i{
+        font-size: 1.125rem;
+    }
+    .card .contenido {
+        font-size: 0.625rem;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .container{
+        margin-top: 10px;
+    }
+    .card{
+        border-radius: 3px;
+    }
+    .card .titulo .estandar{
+        font-size: 0.625rem;
+    }
+    .card .titulo h3{
+        font-size: 0.75rem;
+    }
+
+    .card .titulo i{
+        font-size: 0.5rem;
+    }
+    .card .contenido {
+        font-size: 0.438rem;
+    }
+}
